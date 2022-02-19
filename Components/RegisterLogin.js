@@ -21,10 +21,10 @@ export default function RegisterLogin() {
   const [modal, setModal] = useState(false);
   return (
     <View style={globalStyles.container}>
-      {/* <Modal visible={modal} animationType="slide">
+      <Modal visible={modal} animationType="slide">
         <Button title="Close" onPress={() => setModal(false)} />
         <Login />
-      </Modal> */}
+      </Modal>
       <View style={globalStyles.container}>
         <Text style={globalStyles.heading}>Register</Text>
         <Formik
@@ -40,7 +40,7 @@ export default function RegisterLogin() {
                 <Text style={globalStyles.subHeading}>Create Username</Text>
                 <TextInput
                   style={globalStyles.input}
-                  placeholder="Username garima"
+                  placeholder="Username"
                   onChangeText={props.handleChange("username")}
                   value={props.values.username} //data binding
                   onBlur={props.handleBlur("username")}

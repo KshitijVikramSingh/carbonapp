@@ -5,6 +5,7 @@ import UserInputTwo from './UserInputForm/UserInputTwo'
 import UserInputThree from './UserInputForm/UserInputThree'
 import UserInputFour from './UserInputForm/UserInputFour'
 import UserInputFive from './UserInputForm/UserInputFive'
+import RegisterLogin from './RegisterLogin';
 
 const Stack = createNativeStackNavigator();
 

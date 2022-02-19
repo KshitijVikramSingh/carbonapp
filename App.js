@@ -1,15 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import UserInputFive from './Components/UserInputForm/UserInputFive';
-import UserInputTwo from './Components/UserInputForm/UserInputTwo'
-import Login from './Components/Login'
+import { StyleSheet, View } from 'react-native';
 import AppNavigator from './Components/AppNavigator';
-import SandBox from './Components/sandBox'
+import RegisterLogin from './Components/RegisterLogin';
+
 export default function App() {
   return (
     <View style={styles.container}>
       <AppNavigator/>
-      {/* <SandBox/> */}
+      {/* <RegisterLogin/> */}
       <StatusBar style="auto" />
     </View>
   );

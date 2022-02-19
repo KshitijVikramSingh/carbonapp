@@ -4,6 +4,7 @@ import { globalStyles } from "../../styles/GlobalStyles";
 import * as yup from "yup";
 import { Picker } from "@react-native-picker/picker";
 import * as Progress from 'react-native-progress';
+
 let ValidationSchema = yup.object({
   fiNonVeg: yup.number().min(0),
 });

@@ -4,7 +4,7 @@ import { globalStyles } from '../styles/GlobalStyles';
 import * as yup from 'yup';
 
 let ValidationSchema = yup.object({
-    cool: yup.string()
+    username: yup.string()
         .required()
         .min(5)
         .matches(/^[a-zA-Z0-9]+$/,'Enter only Letters & Numbers'),
@@ -16,7 +16,7 @@ export default function Login() {
             <View style={{...globalStyles.container, backgroundColor:'lime'}}>
                 <Text style={globalStyles.heading}>Login</Text>
                 <Formik
-                    initialValues={{cool:'', password:''}}
+                    initialValues={{username:'', password:''}}
                     // validationSchema={ValidationSchema}
                     onSubmit={(values) => {
                         console.log(values);
@@ -25,16 +25,16 @@ export default function Login() {
                     {(props) => {
                         return(
                         <>
-                            <Text style={globalStyles.subHeading}>Enter cool</Text>
+                            <Text style={globalStyles.subHeading}>Enter username</Text>
                             <TextInput
                                 style={globalStyles.input}
-                                placeholder="cool"
-                                onChangeText={props.handleChange("cool")}
-                                value={props.values.cool} //data binding
-                                onBlur={props.handleBlur("cool")}
+                                placeholder="username"
+                                onChangeText={props.handleChange("username")}
+                                value={props.values.username} //data binding
+                                onBlur={props.handleBlur("username")}
                             />
                             <Text style={globalStyles.errorText}>
-                                {props.touched.cool ? props.errors.cool : ""}
+                                {props.touched.username ? props.errors.username : ""}
                             </Text>
                             <Text style={globalStyles.subHeading}>Enter Password</Text>
                             <TextInput
