@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { Button, Text, View, TextInput, Modal, Linking } from "react-native";
+import { Button, Text, View, TextInput, Modal} from "react-native";
 import { globalStyles } from "../styles/GlobalStyles";
 import * as yup from "yup";
 import { useState } from "react";
@@ -45,7 +45,7 @@ export default function RegisterLogin() {
                   value={props.values.username} //data binding
                   onBlur={props.handleBlur("username")}
                 />
-                <Text style={globalStyles.errorText}>
+                <Text >
                   {props.touched.username ? props.errors.username : ""}
                 </Text>
                 <Text style={globalStyles.subHeading}>Create Password</Text>
