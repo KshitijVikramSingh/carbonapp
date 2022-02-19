@@ -4,7 +4,7 @@ import { globalStyles } from '../styles/GlobalStyles';
 import * as yup from 'yup';
 
 let ValidationSchema = yup.object({
-    username: yup.string()
+    cool: yup.string()
         .required()
         .min(5)
         .matches(/^[a-zA-Z0-9]+$/,'Enter only Letters & Numbers'),
@@ -16,8 +16,8 @@ export default function Login() {
             <View style={{...globalStyles.container, backgroundColor:'lime'}}>
                 <Text style={globalStyles.heading}>Login</Text>
                 <Formik
-                    initialValues={{username:'', password:''}}
-                    validationSchema={ValidationSchema}
+                    initialValues={{cool:'', password:''}}
+                    // validationSchema={ValidationSchema}
                     onSubmit={(values) => {
                         console.log(values);
                     }}
@@ -25,16 +25,16 @@ export default function Login() {
                     {(props) => {
                         return(
                         <>
-                            <Text style={globalStyles.subHeading}>Enter Username</Text>
+                            <Text style={globalStyles.subHeading}>Enter cool</Text>
                             <TextInput
                                 style={globalStyles.input}
-                                placeholder="Username"
-                                onChangeText={props.handleChange("username")}
-                                value={props.values.username} //data binding
-                                onBlur={props.handleBlur("username")}
+                                placeholder="cool"
+                                onChangeText={props.handleChange("cool")}
+                                value={props.values.cool} //data binding
+                                onBlur={props.handleBlur("cool")}
                             />
                             <Text style={globalStyles.errorText}>
-                                {props.touched.username ? props.errors.username : ""}
+                                {props.touched.cool ? props.errors.cool : ""}
                             </Text>
                             <Text style={globalStyles.subHeading}>Enter Password</Text>
                             <TextInput

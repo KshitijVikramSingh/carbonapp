@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import { Button, Text, View, TextInput, Modal, Linking } from "react-native";
+import { Button, Text, View, TextInput, Modal} from "react-native";
 import { globalStyles } from "../styles/GlobalStyles";
 import * as yup from "yup";
 import { useState } from "react";
@@ -21,10 +21,10 @@ export default function RegisterLogin() {
   const [modal, setModal] = useState(false);
   return (
     <View style={globalStyles.container}>
-      <Modal visible={modal} animationType="slide">
+      {/* <Modal visible={modal} animationType="slide">
         <Button title="Close" onPress={() => setModal(false)} />
         <Login />
-      </Modal>
+      </Modal> */}
       <View style={globalStyles.container}>
         <Text style={globalStyles.heading}>Register</Text>
         <Formik
@@ -40,12 +40,12 @@ export default function RegisterLogin() {
                 <Text style={globalStyles.subHeading}>Create Username</Text>
                 <TextInput
                   style={globalStyles.input}
-                  placeholder="Username"
+                  placeholder="Username garima"
                   onChangeText={props.handleChange("username")}
                   value={props.values.username} //data binding
                   onBlur={props.handleBlur("username")}
                 />
-                <Text style={globalStyles.errorText}>
+                <Text >
                   {props.touched.username ? props.errors.username : ""}
                 </Text>
                 <Text style={globalStyles.subHeading}>Create Password</Text>
