@@ -7,8 +7,8 @@ let ValidationSchema = yup.object({
     username: yup.string()
         .required()
         .min(5)
-        .matches(/^[a-zA-Z0-9]+$/,'Enter only Letters & Numbers'),
-    password: yup.string().required().min(6),
+        .matches(/^[a-zA-Z0-9]+$/,'Username contains only Letters and Digits'),
+    password: yup.string().required(),
 });
 
 export default function Login() {
@@ -17,7 +17,7 @@ export default function Login() {
                 <Text style={globalStyles.heading}>Login</Text>
                 <Formik
                     initialValues={{username:'', password:''}}
-                    // validationSchema={ValidationSchema}
+                    validationSchema={ValidationSchema}
                     onSubmit={(values) => {
                         console.log(values);
                     }}
