@@ -26,7 +26,6 @@ export default function UserInputOne({ navigation }) {
         }}
         validationSchema={ValidationSchema}
         onSubmit={(values) => {
-          console.log(obj);
           navigation.push("UserInputTwo");
         }}
       >

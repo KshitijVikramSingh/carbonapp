@@ -6,8 +6,8 @@ import RegisterLogin from './Components/RegisterLogin';
 export default function App() {
   return (
     <View style={styles.container}>
-      <AppNavigator/>
-      {/* <RegisterLogin/> */}
+      {/* <AppNavigator/> */}
+      <RegisterLogin/>
       <StatusBar style="auto" />
     </View>
   );
